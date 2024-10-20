@@ -1,0 +1,100 @@
+/* BackgroundVideo.css */
+.video-background {
+  position: relative;
+  height: 100vh; /* Full height of the viewport */
+  overflow: hidden; /* Prevents overflow of the video */
+}
+
+.video-background video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%; /* Ensures video covers the width */
+  min-height: 100%; /* Ensures video covers the height */
+  width: auto; /* Maintains aspect ratio */
+  height: auto; /* Maintains aspect ratio */
+  z-index: 1; /* Places the video behind the content */
+  transform: translate(-50%, -50%); /* Centers the video */
+}
+
+/* Ensure content is not restricted by the height of the video */
+.content {
+  position: relative;
+  z-index: 2; /* Places content on top of the video */
+  color: white; /* Text color */
+  text-align: center; /* Center align text */
+  padding: 20px; /* Adds some padding for better spacing */
+}
+
+/* Add this to the body to allow scrolling */
+body {
+  overflow-y: auto; /* Allow vertical scrolling */
+  margin: 0; /* Reset default margin */
+}
+
+/* Add a class for additional content to push below the video */
+.additional-content {
+  min-height: 100vh; /* Ensures it takes up at least full viewport height */
+  padding: 20px; /* Optional: Padding for better spacing */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: Background to enhance readability */
+}
+
+.order-container {
+  display: flex; /* Enable flexbox */
+  justify-content: space-around; /* Space between the boxes */
+  align-items: flex-start; /* Align items at the start of the container */
+  margin: 20px auto; /* Center the container with auto margins */
+}
+
+.pizza-order-box, .current-order-box {
+  background-color: #ffffff; /* White background for the boxes */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding inside the boxes */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  width: 300px; /* Set a fixed width for consistency */
+  position: relative; /* Position relative for absolute positioning inside */
+}
+
+h2 {
+  color: #333;
+  text-align: center; /* Center align the headings */
+}
+
+ul {
+  list-style-type: none; /* Remove default bullet points */
+  padding: 0; /* Remove padding */
+  margin: 10px 0; /* Add margin above and below the list */
+}
+
+li {
+  background-color: #f9f9f9; /* Light gray background for list items */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Padding for the list item */
+  margin: 5px 0; /* Space between list items */
+  font-size: 14px; /* Font size for list items */
+}
+
+button {
+  width: 100%; /* Full width for the button */
+  padding: 10px; /* Padding inside the button */
+  background-color: #28a745; /* Green background */
+  color: white; /* White text */
+  border: none; /* No border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+button:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.total-bill {
+  margin-top: 20px; /* Space above the total bill */
+  font-size: 1.2em; /* Larger font for the total bill */
+  font-weight: bold; /* Bold text */
+  text-align: center; /* Center align the total bill */
+}
+
